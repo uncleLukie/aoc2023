@@ -35,6 +35,15 @@ public class Trebuchet {
             Console.WriteLine($"Processing line: '{line}', First Digit: {firstDiglett}, Last Digit: {lastDiglett}, Result: {result}");
             return result;
         }
+        
+        else if (matches.Count == 1)
+        {
+            int theOnlyDiglett = int.Parse(matches[0].Value);
+            int result = theOnlyDiglett * 10 + theOnlyDiglett;
+
+            Console.WriteLine($"Processing line: '{line}', Only One Digit: {theOnlyDiglett}, Result: {result}");
+            return result;
+        }
 
         return 0;
     }
